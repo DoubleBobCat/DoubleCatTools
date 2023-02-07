@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0063)file:///C:/Users/19058/Desktop/%E6%9C%AA%E5%91%BD%E5%90%8D.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>sceeatypist</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7">
+</head>
+
+<body>
+		<div class="item">
+			<a href="https://cx.sceea.cn/">点我进入四川省教育考试院招生考试信息查询系统</a>
+		</div>
+		<div class="item">
+			<label>考生姓名：</label>
+			<input type="text" class="xm" maxlength="16">
+			<label>*特岗教师招聘笔试成绩查询必填</label>
+		</div>
+		<div class="item">
+			<label>考生号：</label>
+			<input type="text" class="ksh" maxlength="14">
+			<label>*除特岗教师招聘笔试成绩查询外必填</label>
+		</div>
+		<div class="item">
+			<label>准考证号：</label>
+			<input type="text" class="zkzh" maxlength="9">
+			<label>*高考成绩查询及高考录取查询必填</label>
+		</div>
+		<div class="item">
+			<label>身份证号：</label>
+			<input type="text" class="sfzh" maxlength="18">
+			<label>*均需要</label>
+		</div>
+		<button class="fuxx">生成</button>
+		<p></p>
+		<script type="text/javascript">
+			const xm = document.querySelector('.xm'),
+				  fuxx = document.querySelector('.fuxx'),
+				  ksh = document.querySelector('.ksh'),
+				  zkzh = document.querySelector('.zkzh'),
+				  sfzh = document.querySelector('.sfzh'),
+				  ptag = document.querySelector('p');
+				  
+			fuxx.onclick = function(){
+				ptag.innerHTML = 'javascript:(function(){';
+				if (xm.value != "")
+					ptag.innerHTML += 'document.evaluate(\'//*[@id="xm"]\',document).iterateNext().value=\'' + xm.value + '\';';
+				if (ksh.value != "")
+					ptag.innerHTML += 'document.evaluate(\'//*[@id="ksh"]\',document).iterateNext().value=\'' + ksh.value + '\';';
+				if (zkzh.value != "")
+					ptag.innerHTML += 'document.evaluate(\'//*[@id="zkzh"]\',document).iterateNext().value=\'' + zkzh.value + '\';';
+				if (sfzh.value != "")
+					ptag.innerHTML += 'document.evaluate(\'//*[@id="sfzh"]\',document).iterateNext().value=\'' + sfzh.value + '\';';
+				ptag.innerHTML += '})()';
+			};
+		</script>
+
+
+
+</body></html>
